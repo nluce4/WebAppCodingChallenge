@@ -2,7 +2,7 @@
 
     include "config.php";
 
-    $db = new mysqli($dbhost, $dbuser, $dbpass, $database);
+    $db = mysqli_connect($dbhost, $dbuser, $dbpass, $database);//new mysqli($dbhost, $dbuser, $dbpass, $database);
     if($db->connect_error){
         die("DB Connection Failed: " . $db->connect_error);
     }
